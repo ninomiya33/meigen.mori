@@ -49,7 +49,7 @@ export default function Advice() {
           date: new Date().toISOString(),
         });
         setTimeout(() => setShowExplanation(true), 2000);
-      } catch (e) {
+      } catch {
         setError("アドバイスの取得に失敗しました。");
       } finally {
         setLoading(false);

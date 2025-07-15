@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
     const data = await res.json();
     const advice = data.choices?.[0]?.message?.content || "名言が取得できませんでした。";
     return NextResponse.json({ advice });
-  } catch (e) {
+  } catch {
     return NextResponse.json({ advice: "名言の取得中にエラーが発生しました。" }, { status: 500 });
   }
 } 

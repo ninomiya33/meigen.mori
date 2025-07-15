@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useConsultHistory } from "../../hooks/useConsultHistory";
 import { HistoryItem } from "../../types/history";
 import { getForestStage } from "../../hooks/forestStage";
+import Link from "next/link";
 
 // 履歴アイコンのランダム配置用
 function getRandomPosition(idx: number, total: number) {
@@ -99,9 +100,9 @@ export default function AlbumPage() {
       {/* モーダルで詳細表示 */}
       {renderModal()}
       <div className="mt-10">
-        <a href="/" className="bg-[#b2f7ef] text-[#183a3a] rounded-full px-8 py-3 text-lg font-semibold shadow hover:bg-[#7de2d1] transition-colors">
+        <Link href="/" className="bg-[#b2f7ef] text-[#183a3a] rounded-full px-8 py-3 text-lg font-semibold shadow hover:bg-[#7de2d1] transition-colors">
           トップページに戻る
-        </a>
+        </Link>
       </div>
     </div>
   );
